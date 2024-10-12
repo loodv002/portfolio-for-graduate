@@ -1,6 +1,6 @@
 # Image Duplicate Checker
 
-This application focuses on speeding up the process of determining whether or not an image exists in the databasae. This application will work properly even if the image file has been compressed, scaled, resized, or had its aspect ratio changed. However, it won't consider two images the same if they have been cropped, or had their color significantly altered.
+This application focuses on speeding up the process of determining whether or not an image exists in the database. This application will work properly even if the image file has been compressed, scaled, resized, or had its aspect ratio changed. However, it won't consider two images the same if they have been cropped, or had their color significantly altered.
 
 > Note that the application returns candidate images based on abstract infomation (see algorithm section for details). Image comparasion methods should still be employed to determine whether a candidate matches target image.
 
@@ -15,7 +15,7 @@ To add a image into database:
 4. Record the bitmap files, counts, in `sqlite3` database.
 
 ### Query Image Record
-To check an image exit or not:
+To check an image exist or not:
 1. Obtain the bitmap using the same steps as for adding an image.
 2. Query to database by specifying ranges for each grid count.
 3. For each query result, compare its bitmap to the target bitmap, determine similarity by number of different pixels.
